@@ -131,6 +131,35 @@ namespace DoubleLinkedList
                     Console.Write(currentnode.rollNumber + "" + currentnode.name + "\n");
             }
         }
+        /*traverses the list in the reverse direction*/
+        public void revtraverse()
+        {
+            if (listEmpty())
+                Console.WriteLine("\n List is empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the descending order of" +
+                    "roll numbers are :\n");
+                node currentnode;
+                for (currentnode = START;
+                    currentnode.next != null;
+                    currentnode = currentnode.next)
+                { }
+                while (currentnode != null)
+                {
+                    Console.Write(currentnode.rollNumber + ""+currentnode.name
+                        + "\n");
+                    currentnode = currentnode.prev;
+                }
+            }
+        }
+        public bool listEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
+        }
         static void Main(string[] args)
         {
         }

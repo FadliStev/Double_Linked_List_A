@@ -115,6 +115,22 @@ namespace DoubleLinkedList
             current.next.prev = previous;
             return true;
         }
+        
+        public void traverse()/*Traverses the list*/
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the ascending order of " +
+                    "roll numbers are : \n");
+                node currentnode;
+                for (currentnode = START;
+                    currentnode != null;
+                    currentnode = currentnode.next)
+                    Console.Write(currentnode.rollNumber + "" + currentnode.name + "\n");
+            }
+        }
         static void Main(string[] args)
         {
         }
